@@ -22,9 +22,11 @@ gray = cv2.cvtColor(lane_image, cv2.COLOR_RGB2GRAY)
  '''
 blur = cv2.GaussianBlur(gray, (5,5), 0)
 
+# Simple Edge Detection Canny(image, low_threshold, high_threshold), best low:high :: 1:3
+canny = cv2.Canny(blur, 50, 150)
 
 # after loading image, we have to render the image using imshow() function
-cv2.imshow('result', blur)
+cv2.imshow('result', canny)
 
 # retain image for specified amount of time
 cv2.waitKey(0)
