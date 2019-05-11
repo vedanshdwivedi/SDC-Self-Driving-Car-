@@ -10,4 +10,5 @@ Requirements
 Steps Taken
 [+] Load image
 [+] Render image
-[+] Change image to grayscale
+[+] Change image to grayscale (cvtColor())
+[+] Reduce Noise and Smoothen Image (Gaussian Blur)
