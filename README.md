@@ -12,3 +12,5 @@ Steps Taken
 [+] Render image
 [+] Change image to grayscale (cvtColor())
 [+] Reduce Noise and Smoothen Image (Gaussian Blur)
+[+] Simple Edge Detection (get outline of image using Canny Method)
+[+] Identify Lane Lines in the image by using matplotlib library and get the coordinates which is your area of interest
