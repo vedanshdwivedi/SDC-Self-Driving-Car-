@@ -38,7 +38,8 @@ def region_of_interest(image):
     # creating a black background
     mask = np.zeros_like(image)
     cv2.fillPoly(mask, polygons, 255)
-    return mask
+    masked_image = cv2.bitwise_and(image, mask)
+    return masked_image
 
 
 
@@ -51,8 +52,10 @@ lane_image = np.copy(image)
 
 canny = canny(lane_image)
 
+cropped_image = region_of_interest(canny)
+
 # after loading image, we have to render the image using imshow() function
-cv2.imshow('result', region_of_interest(canny))
+cv2.imshow('result', cropped_image)
 
 # retain image for specified amount of time
 cv2.waitKey(0)
