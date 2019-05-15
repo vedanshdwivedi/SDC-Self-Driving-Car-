@@ -25,6 +25,24 @@ def canny(image):
     canny = cv2.Canny(blur, 50, 150)
     return canny
 
+
+def region_of_interest(image):
+    # identify the region of interest in the image
+    height = image.shape[0]
+
+    # the below coords have been figured out using matplotlib library
+    polygons = np.array([
+    [(200, height), (1100, height), (550, 250)]
+    ])
+
+    # creating a black background
+    mask = np.zeros_like(image)
+    cv2.fillPoly(mask, polygons, 255)
+    return mask
+
+
+
+
 # read image from file and return as multidimensional numpy array containing relative intensities of each pixel in the image
 image = cv2.imread('test_image.jpg')
 
@@ -34,7 +52,7 @@ lane_image = np.copy(image)
 canny = canny(lane_image)
 
 # after loading image, we have to render the image using imshow() function
-cv2.imshow('result', canny)
+cv2.imshow('result', region_of_interest(canny))
 
 # retain image for specified amount of time
 cv2.waitKey(0)
