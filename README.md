@@ -1,9 +1,9 @@
 # Self Driving Car using Deep Learning
 
 Requirements
-[+] IDE (Atom, Notepad++, Visual Studio Code etc)
-[+] Anaconda Navigator
-[+] numpy
+[+] IDE (Atom, Notepad++, Visual Studio Code etc)<br/>
+[+] Anaconda Navigator<br/>
+[+] numpy<br/>
 [+] openCV (Open Source Computer Vision Library)
 
 
