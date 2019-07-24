@@ -1,4 +1,4 @@
-import cv2
+import cv2  # Open CV
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -11,9 +11,7 @@ def make_coordinates(image, line_parameters):
     x2 = int((y2-intercept)/slope)
     return np.array([x1, y1, x2, y2])
 
-# imread() and imshow() functions will be used
-# imread() - used to load image
-# imshow() - renders the image
+
 
 def canny(image):
     # This function converts an image to grayscale, reduces noise of gray image and uses canny algorithm to find edges
